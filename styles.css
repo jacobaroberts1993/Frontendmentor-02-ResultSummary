@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;}
+
+.main-container{
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 50%;
+    background-color: white;
+    box-shadow:0px 0px 30px 0px hsl(241, 100%, 89%);
+    border-radius: 40px;
+    
+}
+
+.left-card {
+    background-image:linear-gradient(#7857ff,#2e2be9);
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 40px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.left-card h1 {
+    color:hsl(241, 100%, 89%);
+    font-size: 1.7rem;
+    font-weight: 800;
+
+}
+
+.left-card p {
+    color:hsl(241, 100%, 89%);
+    font-size: 18px;
+    max-width: 85%;
+
+}
+
+.left-card h2 {
+    color:white;
+    font-size: 2rem;
+    margin: 0 auto 1rem auto;
+
+}
+
+.score-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:linear-gradient(hsl(256, 72%, 46%) 1%, hsla(241, 72%, 46%, 0));
+    border-radius: 1000px;
+    width: 14rem;
+    height: 14rem;
+    text-align: center;
+    margin: 2rem auto 2rem auto
+
+    
+}
+
+.score-circle p {
+    font-size: 18px;
+    color:hsl(241, 100%, 89%)
+    
+}
+
+#score {
+    font-size: 5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.right-card {
+    background-color: white;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 100%;
+    padding:3rem 2rem 3rem 2rem;
+}
+
+.right-card h1 {
+    font-size: 1.7rem;
+    color:black;
+}
+
+
+svg {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#reaction, #memory, #verbal, #visual {
+    display: grid;
+    grid-template-columns: .2fr 4.5fr 2fr;
+    align-items: center;
+    height: 3.5rem;
+    border-radius: 10px;
+    margin: .5rem auto;
+    width: 100%;
+    
+    
+}
+
+#reaction {
+    background-color: hsla(0, 100%, 67%, 0.114);
+    color:hsl(0, 100%, 67%);
+}
+
+#memory {
+    background-color: hsla(39, 100%, 56%, 0.114);
+    color:hsl(39, 100%, 56%)
+}
+#verbal {
+    background-color: hsla(166, 100%, 37%, 0.114);
+    color:hsl(166, 100%, 37%)
+}
+#visual {
+    background-color: hsla(234, 85%, 45%, 0.114);
+    color:hsl(234, 85%, 45%)
+}
+
+.results h2{
+    font-size:1.1rem;
+}
+
+.results p {
+    color:rgb(137, 137, 137);
+    font-weight: 700;
+}
+.results span {
+    color:hsl(224, 30%, 27%);
+    font-weight: 800;
+}
+
+button {
+    background-color:hsl(224, 30%, 27%) ;
+    height: 3.5rem;
+    width: 100%;
+    color:white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    border-radius: 500px;
+
+}
+
+button:hover, button:active {
+    background-image:linear-gradient(#7857ff,#2e2be9);
+    cursor: pointer;
+}
+
+
+@media (max-width:1100px){
+    .main-container{
+        grid-template-columns: 1fr;
+        max-width: 80%;
+    }
+
+    .right-card {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 40px;
+    }
+}
+
+@media (max-width:375px){
+  
+    .main-container{
+       max-width: 100%;
+       border-radius: 0;
+       height: 100vh;
+    }
+
+    .left-card {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding-top: 0rem;
+        padding-bottom: 1rem;
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    .left-card p {
+        font-size: .9rem;
+    }
+
+    .score-circle {
+       width: 9rem;
+        height: 9rem;
+        text-align: center;
+        margin: 1rem auto 1rem auto
+    }
+   
+
+#score {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.left-card h1 {
+    
+    font-size: 1.2rem;
+    font-weight: 700;
+
+}
+.left-card h2 {
+    
+    font-size: 1.4rem;
+    font-weight: 700;
+
+}
+
+.right-card h1 {
+    font-size: 1.2rem;
+
+}
+
+.right-card {
+    padding-top: 0rem;
+    border-radius: 0;
+    justify-content: center;
+
+}
+.results {
+    margin-top: 1rem;
+}
+
+button {
+    margin-top: 1rem;
+}
+
+}
