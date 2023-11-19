@@ -168,6 +168,8 @@ button {
     font-weight: 700;
     margin-top: 2rem;
     border-radius: 500px;
+    border: none;
+    outline:none;
 
 }
 
@@ -190,11 +192,17 @@ button:hover, button:active {
 }
 
 @media (max-width:375px){
+
+    body {
+        margin:0;
+        padding:0
+    }
   
     .main-container{
        max-width: 100%;
        border-radius: 0;
        height: 100vh;
+       margin:0 0 0 0;
     }
 
     .left-card {
