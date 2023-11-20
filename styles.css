@@ -45,7 +45,7 @@ body {
 
 .left-card p {
     color:hsl(241, 100%, 89%);
-    font-size: 18px;
+    font-size: 1.2rem;
     max-width: 100%;
 
 }
@@ -63,22 +63,22 @@ body {
     justify-content: center;
     align-items: center;
     background-image:linear-gradient(hsl(256, 72%, 46%) 1%, hsla(241, 72%, 46%, 0));
-    border-radius: 1000px;
+    border-radius: 100%;
     width: 14rem;
     height: 14rem;
     text-align: center;
-    margin: 2rem auto 2rem auto
+    margin: 2rem auto;
 
     
 }
 
 .score-circle p {
-    font-size: 18px;
+    font-size: 1.2rem;
     color:hsl(241, 100%, 89%)
     
 }
 
-#score {
+.score {
     font-size: 5rem;
     font-weight: 800;
     color: white;
@@ -93,7 +93,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     max-height: 100%;
-    padding:3rem 2rem 3rem 2rem;
+    padding:3rem 2rem;
 }
 
 .right-card h1 {
@@ -103,9 +103,8 @@ body {
 
 
 svg {
-    display: inline-block;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    float: left;
+    margin-right: .5rem;
 }
 
 .results {
@@ -116,32 +115,43 @@ svg {
     margin-top: 2rem;
 }
 
-#reaction, #memory, #verbal, #visual {
-    display: grid;
-    grid-template-columns: .2fr 4.5fr 2fr;
+.reaction, .memory, .verbal, .visual {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
     align-items: center;
     height: 3.5rem;
     border-radius: 10px;
     margin: .5rem auto;
     width: 100%;
-    
+    padding: 1rem;
     
 }
 
-#reaction {
+.score-left {
+    display: flex;
+    align-items: center;
+}
+
+.score-right {
+    white-space: nowrap;
+}
+
+.reaction {
     background-color: hsla(0, 100%, 67%, 0.114);
     color:hsl(0, 100%, 67%);
 }
 
-#memory {
+.memory {
     background-color: hsla(39, 100%, 56%, 0.114);
     color:hsl(39, 100%, 56%)
 }
-#verbal {
+.verbal {
     background-color: hsla(166, 100%, 37%, 0.114);
     color:hsl(166, 100%, 37%)
 }
-#visual {
+.visual {
     background-color: hsla(234, 85%, 45%, 0.114);
     color:hsl(234, 85%, 45%)
 }
@@ -179,10 +189,14 @@ button:hover, button:active {
 }
 
 
-@media (max-width:1100px){
+@media (max-width:1200px){
     .main-container{
         grid-template-columns: 1fr;
         max-width: 80%;
+    }
+
+    .left-card {
+        padding-top:2rem
     }
 
     .right-card {
@@ -193,16 +207,12 @@ button:hover, button:active {
 
 @media (max-width:375px){
 
-    body {
-        margin:0;
-        padding:0
-    }
   
     .main-container{
        max-width: 100%;
        border-radius: 0;
        height: 100vh;
-       margin:0 0 0 0;
+       margin:0;
     }
 
     .left-card {
@@ -222,11 +232,11 @@ button:hover, button:active {
        width: 9rem;
         height: 9rem;
         text-align: center;
-        margin: 1rem auto 1rem auto
+        margin: 1rem auto;
     }
    
 
-#score {
+.score {
     font-size: 3.2rem;
     font-weight: 800;
     color: white;
